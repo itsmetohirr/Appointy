@@ -18,7 +18,7 @@ FROM nginx:alpine
 RUN mkdir -p /run /var/cache/nginx /var/log/nginx && \
     chown -R nginx:nginx /run /var/cache/nginx /var/log/nginx
 
-COPY --from=builder ./dist /usr/share/nginx/html
+COPY --from=builder /app/dist /usr/share/nginx/html
 
 EXPOSE 3000
 
