@@ -11,6 +11,8 @@ COPY . .
 ARG VITE_API_URL=
 ENV VITE_API_URL=$VITE_API_URL
 
+RUN npm run build
+
 FROM nginx:alpine
 
 RUN mkdir -p /run /var/cache/nginx /var/log/nginx && \
