@@ -20,6 +20,4 @@ RUN mkdir -p /run /var/cache/nginx /var/log/nginx && \
 
 COPY --from=builder /app/dist /usr/share/nginx/html
 
-EXPOSE 3000
-
 CMD ["nginx", "-g", "daemon off;"]
