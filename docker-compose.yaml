@@ -3,7 +3,7 @@ services:
     build: 
       context: ./frontend
       args: 
-        - VITE_BACKEND_URL=http://backend:4000
+        - VITE_BACKEND_URL=http://34.70.161.134:4000
     ports:
       - "80:80"
     depends_on:
